@@ -1,0 +1,27 @@
+{{>header}}
+{{>navbar}}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr class="{{#if status}} alert alert-success {{else}} alert alert-warning{{/if}}">
+            <td>{{id}}</td>
+            <td>{{content}}</td>
+            <td><a href="/showSingle/{{id}}">showSingle</a></td>
+            <td><a href="/edit/{{id}}">edit</a></td>
+            <td><a href="/del/{{id}}">delete</a></td>
+            <td><a href="/changeStatus/{{id}}">changeStatus</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+
+{{>footer}}

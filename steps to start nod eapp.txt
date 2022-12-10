@@ -1,0 +1,22 @@
+ - npm init expess dotenv hbs 
+ - require modules
+ - dotenv file add your ports 
+ - require port from env
+ - call the express
+ - listen to the prot 
+ - first git request >> test
+ - run the server
+ - create source file 
+ - create frontend folder
+ - reating static files
+ - creating hbs files
+ - linking hbs files with path.join views and layouts
+ - setting view engine defult hps 
+ - setting hps views 
+ - connecting routs with hbs
+ - creat app routes with router 
+ - exporting the router
+ - creating contrulers folder
+ - cerating controulers file and class export it 
+ - requireing the controller in the main file
+ - 

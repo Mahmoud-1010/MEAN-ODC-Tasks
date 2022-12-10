@@ -1,0 +1,44 @@
+{{>header}}
+{{>navbar}}
+<section class="my-5 container">
+    <a class="btn btn-primary" href="/sortByName">sort by name</a>
+    <a class="btn btn-primary" href="/sortByNumberOfPages">sort by number of pages</a>
+    <form action="/search">
+        <input class="form-control" name="searchValue" placeholder="search" type="search" id="searchValue">
+        <button class="btn btn-primary">search</button>
+    </form>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>auther</th>
+                <th>category</th>
+                <th>page number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if hasBooks}}
+            {{#each books}}
+            <tr class="">
+                <td>{{id}}</td>
+                <td>{{title}}</td>
+                <td>{{auther}}</td>
+                <td>{{category}}</td>
+                <td>{{number}}</td>
+                <td>
+                    <a href="/single/{{id}}" class="btn btn-primary mx-3">show</a>
+                    <a href="/editBook/{{id}}" class="btn btn-warning mx-3">Edit</a>
+                    <a href="/delete/{{id}}" class="btn btn-danger mx-3">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+            {{else}}
+            <tr class="alert alert-danger">
+                <td colspan="3" class="text-center">no Books  yet</td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+</section>
+{{>footer}}
